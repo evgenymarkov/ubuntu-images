@@ -13,6 +13,10 @@
     },
     {
       "type": "shell",
+      "script": "./scripts/build-tools.sh"
+    },
+    {
+      "type": "shell",
       "script": "../library/cleanup.sh"
     }
   ],
