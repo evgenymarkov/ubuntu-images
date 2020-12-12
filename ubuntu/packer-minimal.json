@@ -17,6 +17,10 @@
     },
     {
       "type": "shell",
+      "script": "../library/user.sh"
+    },
+    {
+      "type": "shell",
       "script": "../library/cleanup.sh"
     }
   ],
@@ -25,7 +29,12 @@
       {
         "type": "docker-import",
         "repository": "evgenymarkov/ubuntu",
-        "tag": "20.04-minimal"
+        "tag": "20.04-minimal",
+        "changes": [
+          "USER ubuntu",
+          "CMD [\"bash\"]",
+          "WORKDIR /home/ubuntu"
+        ]
       }
     ]
   ]
