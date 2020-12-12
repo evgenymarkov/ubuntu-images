@@ -1,0 +1,28 @@
+{
+  "builders": [
+    {
+      "type": "docker",
+      "image": "ubuntu:20.04",
+      "export_path": "./build/minimal.tar"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "script": "../library/upgrade.sh"
+    },
+    {
+      "type": "shell",
+      "script": "../library/cleanup.sh"
+    }
+  ],
+  "post-processors": [
+    [
+      {
+        "type": "docker-import",
+        "repository": "evgenymarkov/ubuntu",
+        "tag": "20.04-minimal"
+      }
+    ]
+  ]
+}
