@@ -4,6 +4,7 @@
       "type": "docker",
       "image": "evgenymarkov/ubuntu:20.04-minimal",
       "pull": false,
+      "exec_user": "root",
       "export_path": "./build/minimal.tar"
     }
   ],
