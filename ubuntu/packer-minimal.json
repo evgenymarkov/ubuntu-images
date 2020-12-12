@@ -13,6 +13,10 @@
     },
     {
       "type": "shell",
+      "script": "../library/network.sh"
+    },
+    {
+      "type": "shell",
       "script": "../library/cleanup.sh"
     }
   ],

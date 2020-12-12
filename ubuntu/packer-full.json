@@ -13,7 +13,11 @@
     },
     {
       "type": "shell",
-      "script": "./scripts/build-tools.sh"
+      "script": "../library/devtools.sh"
+    },
+    {
+      "type": "shell",
+      "script": "../library/network.sh"
     },
     {
       "type": "shell",
