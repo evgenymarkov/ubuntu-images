@@ -33,7 +33,9 @@
         "repository": "evgenymarkov/python",
         "tag": "3.8-full",
         "changes": [
-          "CMD [\"python\"]"
+          "USER ubuntu",
+          "CMD [\"python\"]",
+          "WORKDIR /home/ubuntu"
         ]
       }
     ]

@@ -29,7 +29,9 @@
         "repository": "evgenymarkov/node",
         "tag": "14-minimal",
         "changes": [
-          "CMD [\"node\"]"
+          "USER ubuntu",
+          "CMD [\"node\"]",
+          "WORKDIR /home/ubuntu"
         ]
       }
     ]
