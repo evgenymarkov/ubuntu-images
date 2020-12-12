@@ -26,7 +26,10 @@
       {
         "type": "docker-import",
         "repository": "evgenymarkov/node",
-        "tag": "14-minimal"
+        "tag": "14-minimal",
+        "changes": [
+          "CMD [\"node\"]"
+        ]
       }
     ]
   ]

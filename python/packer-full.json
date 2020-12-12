@@ -26,7 +26,10 @@
       {
         "type": "docker-import",
         "repository": "evgenymarkov/python",
-        "tag": "3.8-full"
+        "tag": "3.8-full",
+        "changes": [
+          "CMD [\"python\"]"
+        ]
       }
     ]
   ]
