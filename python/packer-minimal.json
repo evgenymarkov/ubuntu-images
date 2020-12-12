@@ -1,0 +1,33 @@
+{
+  "builders": [
+    {
+      "type": "docker",
+      "image": "evgenymarkov/ubuntu:20.04-minimal",
+      "pull": false,
+      "export_path": "./build/minimal.tar"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "script": "../library/update.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./scripts/python.sh"
+    },
+    {
+      "type": "shell",
+      "script": "../library/cleanup.sh"
+    }
+  ],
+  "post-processors": [
+    [
+      {
+        "type": "docker-import",
+        "repository": "evgenymarkov/python",
+        "tag": "3.8-minimal"
+      }
+    ]
+  ]
+}
