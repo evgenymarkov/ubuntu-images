@@ -8,7 +8,3 @@
 
 - [Packer](https://www.packer.io)
 - [Docker](https://www.docker.com)
-
-## TODO
-
-- Install pipenv to Python image
