@@ -35,7 +35,10 @@
         "changes": [
           "USER ubuntu",
           "CMD [\"python\"]",
-          "WORKDIR /home/ubuntu"
+          "WORKDIR /home/ubuntu",
+          "ENV LANG en_US.UTF-8",
+          "ENV LANGUAGE en_US.UTF-8",
+          "ENV LC_ALL en_US.UTF-8"
         ]
       }
     ]

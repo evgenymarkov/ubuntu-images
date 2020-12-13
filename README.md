@@ -11,6 +11,6 @@
 
 ## TODO
 
-- Setup locales
+- Setup timezone
 - Add ICU library to Node image
 - Install pipenv to Python image
