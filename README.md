@@ -11,6 +11,5 @@
 
 ## TODO
 
-- Setup timezone
 - Add ICU library to Node image
 - Install pipenv to Python image
