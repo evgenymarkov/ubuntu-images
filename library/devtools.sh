@@ -2,4 +2,4 @@
 set -e
 export DEBIAN_FRONTEND=noninteractive
 
-apt-get install --yes build-essential
+apt-get install --yes git build-essential
