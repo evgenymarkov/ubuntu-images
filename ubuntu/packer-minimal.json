@@ -30,6 +30,10 @@
     },
     {
       "type": "shell",
+      "script": "../library/prompt.sh"
+    },
+    {
+      "type": "shell",
       "script": "../library/cleanup.sh"
     }
   ],
