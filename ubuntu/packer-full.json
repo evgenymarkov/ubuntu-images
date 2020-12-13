@@ -38,6 +38,10 @@
     },
     {
       "type": "shell",
+      "script": "../library/completion.sh"
+    },
+    {
+      "type": "shell",
       "script": "../library/cleanup.sh"
     }
   ],
