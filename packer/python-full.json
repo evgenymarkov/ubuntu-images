@@ -2,39 +2,38 @@
   "builders": [
     {
       "type": "docker",
-      "image": "evgenymarkov/ubuntu:20.04-full",
-      "pull": false,
+      "image": "ghcr.io/evgenymarkov/ubuntu:20.04-full",
       "exec_user": "root",
-      "export_path": "./build/full.tar"
+      "export_path": "./build/python-full.tar"
     }
   ],
   "provisioners": [
     {
       "type": "shell",
-      "script": "../library/update.sh"
+      "script": "./library/update.sh"
     },
     {
       "type": "shell",
-      "script": "../library/python.sh"
+      "script": "./library/python.sh"
     },
     {
       "type": "shell",
-      "script": "../library/python-pip.sh"
+      "script": "./library/python-pip.sh"
     },
     {
       "type": "shell",
-      "script": "../library/python-pipenv.sh"
+      "script": "./library/python-pipenv.sh"
     },
     {
       "type": "shell",
-      "script": "../library/cleanup.sh"
+      "script": "./library/cleanup.sh"
     }
   ],
   "post-processors": [
     [
       {
         "type": "docker-import",
-        "repository": "evgenymarkov/python",
+        "repository": "ghcr.io/evgenymarkov/python",
         "tag": "3.8-full",
         "changes": [
           "USER ubuntu",
@@ -45,6 +44,9 @@
           "ENV LC_ALL en_US.UTF-8",
           "ENV TZ Etc/UTC"
         ]
+      },
+      {
+        "type": "docker-push"
       }
     ]
   ]

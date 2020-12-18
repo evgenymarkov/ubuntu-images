@@ -2,32 +2,31 @@
   "builders": [
     {
       "type": "docker",
-      "image": "evgenymarkov/ubuntu:20.04-full",
-      "pull": false,
+      "image": "ghcr.io/evgenymarkov/ubuntu:20.04-minimal",
       "exec_user": "root",
-      "export_path": "./build/full.tar"
+      "export_path": "./build/node-minimal.tar"
     }
   ],
   "provisioners": [
     {
       "type": "shell",
-      "script": "../library/update.sh"
+      "script": "./library/update.sh"
     },
     {
       "type": "shell",
-      "script": "../library/node.sh"
+      "script": "./library/node.sh"
     },
     {
       "type": "shell",
-      "script": "../library/cleanup.sh"
+      "script": "./library/cleanup.sh"
     }
   ],
   "post-processors": [
     [
       {
         "type": "docker-import",
-        "repository": "evgenymarkov/node",
-        "tag": "14-full",
+        "repository": "ghcr.io/evgenymarkov/node",
+        "tag": "14-minimal",
         "changes": [
           "USER ubuntu",
           "CMD [\"node\"]",
@@ -37,6 +36,9 @@
           "ENV LC_ALL en_US.UTF-8",
           "ENV TZ Etc/UTC"
         ]
+      },
+      {
+        "type": "docker-push"
       }
     ]
   ]
