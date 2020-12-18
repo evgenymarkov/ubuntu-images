@@ -1,5 +1,9 @@
 name: Building
-on: pull_request
+
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   building:
