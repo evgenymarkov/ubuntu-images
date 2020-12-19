@@ -18,6 +18,10 @@
     },
     {
       "type": "shell",
+      "script": "./library/node.sh"
+    },
+    {
+      "type": "shell",
       "script": "./library/python-pip.sh"
     },
     {
@@ -35,6 +39,10 @@
     {
       "type": "shell",
       "script": "./library/python-flake8.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./library/python-pyright.sh"
     },
     {
       "type": "shell",
