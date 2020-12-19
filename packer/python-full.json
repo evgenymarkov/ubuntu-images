@@ -26,6 +26,14 @@
     },
     {
       "type": "shell",
+      "script": "./library/python-black.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./library/python-isort.sh"
+    },
+    {
+      "type": "shell",
       "script": "./library/cleanup.sh"
     }
   ],
