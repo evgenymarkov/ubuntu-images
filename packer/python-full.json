@@ -34,6 +34,10 @@
     },
     {
       "type": "shell",
+      "script": "./library/python-flake8.sh"
+    },
+    {
+      "type": "shell",
       "script": "./library/cleanup.sh"
     }
   ],
