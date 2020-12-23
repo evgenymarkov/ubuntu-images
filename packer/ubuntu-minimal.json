@@ -14,6 +14,10 @@
     },
     {
       "type": "shell",
+      "script": "./library/user.sh"
+    },
+    {
+      "type": "shell",
       "script": "./library/locales.sh"
     },
     {
@@ -26,15 +30,15 @@
     },
     {
       "type": "shell",
-      "script": "./library/user.sh"
+      "script": "./library/completion.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./library/nano.sh"
     },
     {
       "type": "shell",
       "script": "./library/prompt.sh"
-    },
-    {
-      "type": "shell",
-      "script": "./library/completion.sh"
     },
     {
       "type": "shell",
