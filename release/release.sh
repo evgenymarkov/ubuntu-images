@@ -62,6 +62,7 @@ release() {
 }
 
 version="$(get_version)"
+mkdir -p "${project}/build"
 
 {
   release \
