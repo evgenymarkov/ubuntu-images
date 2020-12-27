@@ -13,7 +13,7 @@ Working directory: ${meta_working_dir}<br>
 
 <details>
   <summary>Environment</summary>
-  <code><pre>${meta_environment}</pre></code>
+  <pre><code>${meta_environment}</code></pre>
 </details>
 
 <br>
@@ -26,25 +26,25 @@ Working directory: ${runtime_working_dir}<br>
 
 <details>
   <summary>Locale settings</summary>
-  <code><pre>${runtime_locale_settings}</pre></code>
+  <pre><code>${runtime_locale_settings}</code></pre>
 </details>
 
 <details>
   <summary>Supported locales</summary>
-  <code><pre>${runtime_supported_locales}</pre></code>
+  <pre><code>${runtime_supported_locales}</code></pre>
 </details>
 
 <details>
   <summary>Installed OS packages</summary>
-  <code><pre>${runtime_installed_os_packages}</pre></code>
+  <pre><code>${runtime_installed_os_packages}</code></pre>
 </details>
 
 <details>
   <summary>Installed Node packages</summary>
-  <code><pre>${runtime_installed_node_packages}</pre></code>
+  <pre><code>${runtime_installed_node_packages}</code></pre>
 </details>
 
 <details>
   <summary>Installed Python packages</summary>
-  <code><pre>${runtime_installed_python_packages}</pre></code>
+  <pre><code>${runtime_installed_python_packages}</code></pre>
 </details>

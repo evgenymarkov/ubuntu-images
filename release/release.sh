@@ -64,9 +64,6 @@ release() {
 version="$(get_version)"
 
 {
-  echo "# Ubuntu Images [${version}]"
-  printf '\n'
-
   release \
     "Ubuntu Minimal" "${version}" \
     'ghcr.io/evgenymarkov/ubuntu:20.04-minimal'
