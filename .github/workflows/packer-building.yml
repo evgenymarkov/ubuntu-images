@@ -37,6 +37,8 @@ jobs:
 
       - name: Release images
         run: |
+          sudo apt-get update
+          sudo apt-get install jq pwgen
           make release
 
       - name: Create release
