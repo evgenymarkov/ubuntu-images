@@ -65,6 +65,9 @@
           "ENV TZ Etc/UTC",
           "ENV PIPENV_VENV_IN_PROJECT 1"
         ]
+      },
+      {
+        "type": "docker-push"
       }
     ]
   ]

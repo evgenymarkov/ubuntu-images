@@ -60,6 +60,9 @@
           "ENV LC_ALL en_US.UTF-8",
           "ENV TZ Etc/UTC"
         ]
+      },
+      {
+        "type": "docker-push"
       }
     ]
   ]
