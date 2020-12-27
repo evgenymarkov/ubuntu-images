@@ -45,6 +45,7 @@ release() {
   version="${2}"
   base_tag="${3}"
 
+  docker pull "${base_tag}"
   release_tag="${base_tag}-${version}"
   docker tag "${base_tag}" "${release_tag}"
 
@@ -55,7 +56,6 @@ release() {
       "${script}/template.md"
   )
 
-  docker push "${base_tag}" > /dev/null 2>&1
   docker push "${release_tag}" > /dev/null 2>&1
 
   echo "${description}"
