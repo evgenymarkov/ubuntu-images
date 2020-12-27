@@ -51,3 +51,8 @@ build-node:
 
 	@echo "Building Node full image"
 	@packer build ./packer/node-full.json
+
+.PHONY: release
+release:
+	@echo "Releasing images..."
+	@sh ./release/release.sh
