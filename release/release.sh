@@ -45,7 +45,8 @@ release() {
   version="${2}"
   base_tag="${3}"
 
-  docker pull "${base_tag}"
+  docker pull "${base_tag}" > /dev/null 2>&1
+
   release_tag="${base_tag}-${version}"
   docker tag "${base_tag}" "${release_tag}"
 
