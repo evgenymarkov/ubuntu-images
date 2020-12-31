@@ -26,7 +26,7 @@
     },
     {
       "type": "shell",
-      "script": "./library/python-pipenv.sh"
+      "script": "./library/python-poetry.sh"
     },
     {
       "type": "shell",
@@ -63,7 +63,7 @@
           "ENV LANGUAGE en_US.UTF-8",
           "ENV LC_ALL en_US.UTF-8",
           "ENV TZ Etc/UTC",
-          "ENV PIPENV_VENV_IN_PROJECT 1"
+          "ENV POETRY_VIRTUALENVS_IN_PROJECT true"
         ]
       },
       {
