@@ -38,4 +38,4 @@ jobs:
         with:
           body_path: ./build/release.md
           tag_name: ${{ github.event.inputs.version }}
-          release_name: Ubuntu Images ${{ github.event.inputs.version }}
+          release_name: ${{ github.event.inputs.version }}
