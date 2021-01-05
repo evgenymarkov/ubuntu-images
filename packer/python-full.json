@@ -30,18 +30,6 @@
     },
     {
       "type": "shell",
-      "script": "./library/python-black.sh"
-    },
-    {
-      "type": "shell",
-      "script": "./library/python-isort.sh"
-    },
-    {
-      "type": "shell",
-      "script": "./library/python-flake8.sh"
-    },
-    {
-      "type": "shell",
       "script": "./library/python-pyright.sh"
     },
     {
