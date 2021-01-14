@@ -3,54 +3,42 @@ validate: validate-ubuntu validate-python validate-node
 
 .PHONY: validate-ubuntu
 validate-ubuntu:
-	@echo "Validating Ubuntu minimal image"
-	@packer validate ./packer/ubuntu-minimal.json
+	@echo "Validating Ubuntu image"
+	@packer validate ./packer/ubuntu.json
 
-	@echo "Validating Ubuntu full image"
-	@packer validate ./packer/ubuntu-full.json
+	@echo "Validating Ubuntu Dev image"
+	@packer validate ./packer/ubuntu-dev.json
 
 .PHONY: validate-python
 validate-python:
-	@echo "Validating Python minimal image"
-	@packer validate ./packer/python-minimal.json
-
-	@echo "Validating Python full image"
-	@packer validate ./packer/python-full.json
+	@echo "Validating Python image"
+	@packer validate ./packer/python.json
 
 .PHONY: validate-node
 validate-node:
-	@echo "Validating Node minimal image"
-	@packer validate ./packer/node-minimal.json
-
-	@echo "Validating Node full image"
-	@packer validate ./packer/node-full.json
+	@echo "Validating Node image"
+	@packer validate ./packer/node.json
 
 .PHONY: build
 build: build-ubuntu build-python build-node
 
 .PHONY: build-ubuntu
 build-ubuntu:
-	@echo "Building Ubuntu minimal image"
-	@packer build ./packer/ubuntu-minimal.json
+	@echo "Building Ubuntu image"
+	@packer build ./packer/ubuntu.json
 
-	@echo "Building Ubuntu full image"
-	@packer build ./packer/ubuntu-full.json
+	@echo "Building Ubuntu Dev image"
+	@packer build ./packer/ubuntu-dev.json
 
 .PHONY: build-python
 build-python:
-	@echo "Building Python minimal image"
-	@packer build ./packer/python-minimal.json
-
-	@echo "Building Python full image"
-	@packer build ./packer/python-full.json
+	@echo "Building Python image"
+	@packer build ./packer/python.json
 
 .PHONY: build-node
 build-node:
-	@echo "Building Node minimal image"
-	@packer build ./packer/node-minimal.json
-
-	@echo "Building Node full image"
-	@packer build ./packer/node-full.json
+	@echo "Building Node image"
+	@packer build ./packer/node.json
 
 .PHONY: release
 release:

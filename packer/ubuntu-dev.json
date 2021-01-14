@@ -2,15 +2,47 @@
   "builders": [
     {
       "type": "docker",
-      "image": "ghcr.io/evgenymarkov/ubuntu:20.04-full",
+      "image": "ubuntu:20.04",
       "exec_user": "root",
-      "export_path": "./build/python-full.tar"
+      "export_path": "./build/ubuntu-dev.tar"
     }
   ],
   "provisioners": [
     {
       "type": "shell",
-      "script": "./library/update.sh"
+      "script": "./library/upgrade.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./library/user.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./library/locales.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./library/timezone.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./library/devtools.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./library/network.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./library/completion.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./library/nano.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./library/prompt.sh"
     },
     {
       "type": "shell",
@@ -41,11 +73,11 @@
     [
       {
         "type": "docker-import",
-        "repository": "ghcr.io/evgenymarkov/python",
-        "tag": "3.8-full",
+        "repository": "ghcr.io/evgenymarkov/ubuntu-dev",
+        "tag": "20.04",
         "changes": [
           "USER ubuntu",
-          "CMD [\"python\"]",
+          "CMD [\"bash\"]",
           "WORKDIR /home/ubuntu",
           "ENV LANG en_US.UTF-8",
           "ENV LANGUAGE en_US.UTF-8",

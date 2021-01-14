@@ -2,9 +2,9 @@
   "builders": [
     {
       "type": "docker",
-      "image": "ghcr.io/evgenymarkov/ubuntu:20.04-full",
+      "image": "ghcr.io/evgenymarkov/ubuntu:20.04",
       "exec_user": "root",
-      "export_path": "./build/node-full.tar"
+      "export_path": "./build/node.tar"
     }
   ],
   "provisioners": [
@@ -26,7 +26,7 @@
       {
         "type": "docker-import",
         "repository": "ghcr.io/evgenymarkov/node",
-        "tag": "14-full",
+        "tag": "14",
         "changes": [
           "USER ubuntu",
           "CMD [\"node\"]",

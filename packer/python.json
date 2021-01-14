@@ -2,9 +2,9 @@
   "builders": [
     {
       "type": "docker",
-      "image": "ghcr.io/evgenymarkov/ubuntu:20.04-minimal",
+      "image": "ghcr.io/evgenymarkov/ubuntu:20.04",
       "exec_user": "root",
-      "export_path": "./build/node-minimal.tar"
+      "export_path": "./build/python.tar"
     }
   ],
   "provisioners": [
@@ -14,7 +14,7 @@
     },
     {
       "type": "shell",
-      "script": "./library/node.sh"
+      "script": "./library/python.sh"
     },
     {
       "type": "shell",
@@ -25,11 +25,11 @@
     [
       {
         "type": "docker-import",
-        "repository": "ghcr.io/evgenymarkov/node",
-        "tag": "14-minimal",
+        "repository": "ghcr.io/evgenymarkov/python",
+        "tag": "3.8",
         "changes": [
           "USER ubuntu",
-          "CMD [\"node\"]",
+          "CMD [\"python\"]",
           "WORKDIR /home/ubuntu",
           "ENV LANG en_US.UTF-8",
           "ENV LANGUAGE en_US.UTF-8",
