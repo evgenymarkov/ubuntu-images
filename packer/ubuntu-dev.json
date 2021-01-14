@@ -46,6 +46,26 @@
     },
     {
       "type": "shell",
+      "script": "./library/python.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./library/node.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./library/python-pip.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./library/python-poetry.sh"
+    },
+    {
+      "type": "shell",
+      "script": "./library/python-pyright.sh"
+    },
+    {
+      "type": "shell",
       "script": "./library/cleanup.sh"
     }
   ],
@@ -62,7 +82,8 @@
           "ENV LANG en_US.UTF-8",
           "ENV LANGUAGE en_US.UTF-8",
           "ENV LC_ALL en_US.UTF-8",
-          "ENV TZ Etc/UTC"
+          "ENV TZ Etc/UTC",
+          "ENV POETRY_VIRTUALENVS_IN_PROJECT true"
         ]
       },
       {
