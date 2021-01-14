@@ -73,8 +73,8 @@ mkdir -p "${project}/build"
   printf '\n<br>\n\n'
 
   release \
-    "Ubuntu Full" "${version}" \
-    'ghcr.io/evgenymarkov/ubuntu:20.04-full'
+    "Ubuntu Dev" "${version}" \
+    'ghcr.io/evgenymarkov/ubuntu-dev:20.04'
 
   printf '\n<br>\n\n'
 

@@ -6,8 +6,8 @@ validate-ubuntu:
 	@echo "Validating Ubuntu image"
 	@packer validate ./packer/ubuntu.json
 
-	@echo "Validating Ubuntu full image"
-	@packer validate ./packer/ubuntu-full.json
+	@echo "Validating Ubuntu Dev image"
+	@packer validate ./packer/ubuntu-dev.json
 
 .PHONY: validate-python
 validate-python:
@@ -27,8 +27,8 @@ build-ubuntu:
 	@echo "Building Ubuntu image"
 	@packer build ./packer/ubuntu.json
 
-	@echo "Building Ubuntu full image"
-	@packer build ./packer/ubuntu-full.json
+	@echo "Building Ubuntu Dev image"
+	@packer build ./packer/ubuntu-dev.json
 
 .PHONY: build-python
 build-python:

@@ -4,7 +4,7 @@
       "type": "docker",
       "image": "ubuntu:20.04",
       "exec_user": "root",
-      "export_path": "./build/ubuntu-full.tar"
+      "export_path": "./build/ubuntu-dev.tar"
     }
   ],
   "provisioners": [
@@ -53,8 +53,8 @@
     [
       {
         "type": "docker-import",
-        "repository": "ghcr.io/evgenymarkov/ubuntu",
-        "tag": "20.04-full",
+        "repository": "ghcr.io/evgenymarkov/ubuntu-dev",
+        "tag": "20.04",
         "changes": [
           "USER ubuntu",
           "CMD [\"bash\"]",
