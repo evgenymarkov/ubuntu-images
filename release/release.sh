@@ -85,18 +85,6 @@ mkdir -p "${project}/build"
   printf '\n<br>\n\n'
 
   release \
-    "Python Full" "${version}" \
-    'ghcr.io/evgenymarkov/python:3.8-full'
-
-  printf '\n<br>\n\n'
-
-  release \
     "Node" "${version}" \
     'ghcr.io/evgenymarkov/node:14'
-
-  printf '\n<br>\n\n'
-
-  release \
-    "Node Full" "${version}" \
-    'ghcr.io/evgenymarkov/node:14-full'
 } > "${project}/build/release.md"
