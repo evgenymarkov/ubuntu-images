@@ -67,8 +67,8 @@ mkdir -p "${project}/build"
 
 {
   release \
-    "Ubuntu Minimal" "${version}" \
-    'ghcr.io/evgenymarkov/ubuntu:20.04-minimal'
+    "Ubuntu" "${version}" \
+    'ghcr.io/evgenymarkov/ubuntu:20.04'
 
   printf '\n<br>\n\n'
 
@@ -79,8 +79,8 @@ mkdir -p "${project}/build"
   printf '\n<br>\n\n'
 
   release \
-    "Python Minimal" "${version}" \
-    'ghcr.io/evgenymarkov/python:3.8-minimal'
+    "Python" "${version}" \
+    'ghcr.io/evgenymarkov/python:3.8'
 
   printf '\n<br>\n\n'
 
@@ -91,8 +91,8 @@ mkdir -p "${project}/build"
   printf '\n<br>\n\n'
 
   release \
-    "Node Minimal" "${version}" \
-    'ghcr.io/evgenymarkov/node:14-minimal'
+    "Node" "${version}" \
+    'ghcr.io/evgenymarkov/node:14'
 
   printf '\n<br>\n\n'
 

@@ -4,7 +4,7 @@
       "type": "docker",
       "image": "ubuntu:20.04",
       "exec_user": "root",
-      "export_path": "./build/ubuntu-minimal.tar"
+      "export_path": "./build/ubuntu.tar"
     }
   ],
   "provisioners": [
@@ -50,7 +50,7 @@
       {
         "type": "docker-import",
         "repository": "ghcr.io/evgenymarkov/ubuntu",
-        "tag": "20.04-minimal",
+        "tag": "20.04",
         "changes": [
           "USER ubuntu",
           "CMD [\"bash\"]",
